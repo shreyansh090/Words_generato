@@ -6,61 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Word2Vec example Using a pre-trained model on common English words.</title>
   <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-  <link href = "style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 
-<body class = ' my-4'>
+<body class=' my-4'>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Fluid Junction</h1>
-      <p class="lead">This is an Ai that generates synonyms and funny phrases with hel of ml5.js!</p>
+      <p class="lead">This is an AI that generates synonyms and funny phrases with help of ml5.js!</p>
     </div>
   </div>
-  
-  <div class = "container my-4">
-  <p id='status'>Loading Mode...</p>
-  <div>
-    <div class="row">
-     
 
+  <div class="container my-4">
+    <p id="status" class="alert alert-danger" role="alert">Loading Mode...</p>
+    <div>
+      <form id="form">
+        <div class="row">
+          <div class="input-group">
+            <input type="text" value="rainbow" id="nearword" class="form-control" required>
+            <div class="input-group-append">
+              <input type="submit" class="btn" value="Get Nearest Words">
+            </div>
+          </div>
 
-      <div class="input-group">
-        <input type="text"  id = "nearword" class="form-control" required>
-        <div class="input-group-append">
-          <input type="submit" id="submit" class="btn" value="Get Nearest Words">
+          <p class="mx-2" id="results"></p>
         </div>
-      </div>
+      </form>
+      <form id="form2">
+        <div class="row">
+          <p>
+          <div style="font-weight: 600; font-size: large;">Between</div>
+          <input type="text" value="rainbow" id="between1" class="form-control" />
+          <div style="font-weight: 600; font-size: large;">and</div>
+          <input type="text" value="kitten" id="between2" class="form-control" />
+          <input type="submit" class="btn my-2" value="is equal to">
+          </p>
+          <p id="results2"></p>
+        </div>
+      </form>
 
-
-
-
-
-      <p class = "mx-2" id="results"></p>
-    </div>
-
-    <div class="row">
-      <p>
-        Between
-        <input type="text" value="rainbow" id="between1"  class ="form-control"/> and
-        <input type="text" value="kitten" id="between2"     class ="form-control"                        />
-        <input type="submit" id="submit2" class="btn my-2" value="Is equal to....">
-      </p>
-      <p id="results2"></p>
-    </div>
-
-    <div class="row">
-      <p>
-        <input type="text" value="pizza" id="isto1"   class ="form-control"  /> is to
-        <input type="text" value="humans" id="isto2"  class ="form-control"   /> as
-        <input type="text" value="fish" id="isto3"   class ="form-control" />
-        <input type="submit" id="submit3" class="btn my-2" value="is to...">
-      </p>
-      <p id="results3"></p>
+      <form id="form3">
+        <div class="row">
+          <p>
+          <div></div>
+          <input type="text" value="pizza" id="isto1" class="form-control" />
+          <div style="font-weight: 600; font-size: large;">is to</div>
+          <input type="text" value="humans" id="isto2" class="form-control" />
+          <div style="font-weight: 600; font-size: large;">as</div>
+          <input type="text" value="fish" id="isto3" class="form-control" />
+          <input type="submit" class="btn my-2" value="is to">
+          </p>
+          <p id="results3"></p>
+        </div>
+      </form>
     </div>
   </div>
-</div>
   <script src="app.js"></script>
 
 </body>
