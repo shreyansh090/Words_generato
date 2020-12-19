@@ -16,3 +16,7 @@
     position: absolute;
     top: 50%;
   }
+  
+  body{
+    background-image: url('Background-website-01.jpg');
+  } 
