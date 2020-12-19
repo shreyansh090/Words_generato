@@ -1,6 +1,18 @@
-.center {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+.container{
+  max-width: 600px;
+  position: relative;
+}
+ 
+  .btn{
+    background: #43d9be;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .btn:focus{
+    outline: none !important;
+  }
+  .cy{
+    position: absolute;
+    top: 50%;
   }
